@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noai, noimageai">
+
+    <title>Thank You — Josh Pierson</title>
+
+    <!-- General page description, used by search engines -->
+    <meta name="description" content="Thanks for reaching out — Josh Pierson photography portfolio.">
+
+    <!-- Favicon: browser tab icon and iOS home-screen bookmark icon, both generated from photo-02.jpg -->
+    <link rel="icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body class="error-page">
+
+<header id="site-header">
+
+    <h1>
+        <a href="index.html">Josh Pierson</a>
+        <a href="contact.html" class="contact-link">Contact</a>
+    </h1>
+
+</header>
+
+<!-- Netlify Forms redirects here after a successful contact form submission
+     (see the form's action="/thank-you.html" attribute in contact.html). -->
+<main id="error-page">
+
+    <h2>Thanks!</h2>
+    <p>Thanks for reaching out! I'll get back to you soon.</p>
+    <a href="index.html">Back to the gallery</a>
+
+</main>
+
+<footer id="site-footer">
+    <p>&copy; 2026 Josh Pierson. All rights reserved. No AI training or scraping permitted.</p>
+</footer>
+
+<script>
+const header = document.getElementById("site-header");
+
+let mobileHeaderTimer;
+
+function showMobileHeader() {
+
+    header.classList.add("visible");
+
+    clearTimeout(mobileHeaderTimer);
+
+    mobileHeaderTimer = setTimeout(() => {
+        header.classList.remove("visible");
+    }, 3000);
+
+}
+
+
+// DESKTOP HEADER
+document.addEventListener("mousemove", (event) => {
+
+    if (window.innerWidth > 768) {
+
+        if (event.clientY < 50) {
+            header.classList.add("visible");
+        } else {
+            header.classList.remove("visible");
+        }
+
+    }
+
+});
+
+
+// MOBILE HEADER
+function handleMobileInteraction() {
+
+    if (window.innerWidth <= 768) {
+        showMobileHeader();
+    }
+
+}
+
+document.addEventListener("touchstart", handleMobileInteraction);
+document.addEventListener("touchmove", handleMobileInteraction);
+document.addEventListener("scroll", handleMobileInteraction);
+</script>
+
+
+</body>
+
+</html>

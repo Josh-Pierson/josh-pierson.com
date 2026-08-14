@@ -153,6 +153,105 @@ body.contact-page {
     opacity: 0.6;
 }
 
+/* Contact form: kept plain (transparent fields, white underline) to match the
+   minimal look of the rest of the site instead of looking like a boxed widget. */
+.contact-form {
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    max-width: 400px;
+}
+
+.form-field {
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+
+    margin-bottom: 6px;
+
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    color: white;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 8px 0;
+
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    border-radius: 0;
+
+    color: white;
+
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 16px;
+
+    /* Removes the iOS/Android default rounded-rectangle form styling so
+       inputs stay flat and match the underline look above. */
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.contact-form select {
+    /* Dark background needed for the dropdown list itself — most mobile/desktop
+       browsers render <option> items with their own opaque background, and a
+       transparent select would leave the open list unreadable against page content. */
+    background-color: black;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: white;
+    opacity: 0.5;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-bottom-color: white;
+}
+
+/* Submit button styled like the site's plain uppercase text links rather than
+   a boxed button, to match the header/nav look. */
+.contact-form button {
+    padding: 10px 24px;
+
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 0;
+
+    color: white;
+
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    transition: opacity 0.2s ease;
+}
+
+.contact-form button:hover {
+    opacity: 0.6;
+}
+
 .instagram-icon {
     width: 22px;
     height: 22px;
