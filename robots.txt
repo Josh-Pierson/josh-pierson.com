@@ -1,0 +1,52 @@
+# robots.txt for josh-pierson.com
+#
+# This file tells web crawlers which parts of the site they may access.
+# It is a voluntary standard — well-behaved bots respect it, but it cannot
+# technically stop a crawler that chooses to ignore it.
+
+# --- AI training / scraping crawlers: blocked ---
+# These bots are used by AI companies to collect content (including images)
+# for training large language models and generative AI. Disallowing "/"
+# tells them not to crawl any page on this site.
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Meta-ExternalAgent
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Applebot-Extended
+Disallow: /
+
+# --- Standard search engine crawlers: allowed ---
+# These bots index the site for normal web search results (Google Search,
+# Bing Search). Allowing "/" lets them crawl the whole site as usual.
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# --- Everyone else ---
+# Default rule for any crawler not listed above. Allowed by default so
+# legitimate search engines aren't accidentally blocked; add specific
+# Disallow blocks above for any other bot you want to keep out.
+
+User-agent: *
+Allow: /
