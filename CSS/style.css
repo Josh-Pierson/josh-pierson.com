@@ -1,0 +1,183 @@
+/* =========================
+   HEADER
+   ========================= */
+
+#site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    padding: 15px 0;
+
+    opacity: 0;
+
+    transition: opacity 0.35s ease;
+
+    pointer-events: auto;
+
+    z-index: 1000;
+}
+
+#site-header.visible {
+    opacity: 1;
+}
+
+#site-header h1 {
+    margin-left: 20px;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 20px;
+    font-weight: 200;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+}
+
+#site-header a {
+    color: white;
+    text-decoration: none;
+}
+
+#site-header .contact-link {
+    margin-left: 18px;
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================
+   GENERAL PAGE
+   ========================= */
+
+body {
+    background: black;
+    color: white;
+
+    font-family: Arial, sans-serif;
+
+    margin: 0;
+}
+
+body.contact-page {
+    background-image: url("../images/contact-background.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    background-attachment: fixed;
+}
+
+/* =========================
+   PHOTO GALLERY
+   ========================= */
+
+#gallery {
+    width: 100%;
+    padding-top: 40px;
+}
+
+#gallery img {
+    display: block;
+
+    width: 80%;
+    max-width: 1000px;
+    height: auto;
+
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-bottom: 1000px;
+}
+
+
+/* =========================
+   INFINITE SCROLL MARKER
+   ========================= */
+
+#bottom-marker {
+    height: 1px;
+}
+
+
+/* =========================
+   CONTACT PAGE
+   ========================= */
+
+#contact-page {
+    min-height: 100vh;
+
+    margin-left: 10px;
+
+    padding-top: 40px;
+    padding-bottom: 100px;
+
+    box-sizing: border-box;
+}
+
+#contact-page img {
+    display: block;
+
+    width: 60%;
+    max-width: 400px;
+    height: auto;
+
+    margin-bottom: 50px;
+}
+
+.contact-text {
+    color: white;
+
+    font-family: Helvetica, Arial, sans-serif;
+
+    font-size: 16px;
+
+    line-height: 1.6;
+
+    max-width: 500px;
+}
+
+.contact-text a {
+    color: white;
+    text-decoration: none;
+}
+
+.contact-text a:hover {
+    opacity: 0.6;
+}
+
+.instagram-icon {
+    width: 22px;
+    height: 22px;
+
+    display: block;
+
+    margin-top: 20px;
+}
+
+/* =========================
+MOBILE HEADER BEHAVIOR
+========================= */
+
+@media (max-width: 768px) {
+
+#site-header {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+}
+
+#site-header.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+}
+
