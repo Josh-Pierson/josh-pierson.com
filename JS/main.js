@@ -19,6 +19,14 @@ function displayPhotos(photoList) {
 
         image.src = "images/gallery/" + photo;
 
+        // Skip lazy loading only on the very first photo added to the page,
+        // since it's the one visible above the fold when the page loads.
+        // Every other photo gets loading="lazy" so the browser waits to
+        // download it until the user scrolls near it, speeding up initial load.
+        if (gallery.childElementCount > 0) {
+            image.loading = "lazy";
+        }
+
         gallery.appendChild(image);
 
     });

@@ -1,0 +1,42 @@
+# netlify.toml — Netlify's configuration file.
+# This site is plain HTML/CSS/JS with no build step, so this file only
+# configures how Netlify serves the files as-is (redirects, caching,
+# security headers). It does NOT define a build command.
+#
+# Sections below:
+#   [[redirects]] - sends any unknown URL to our custom 404.html page
+#   [[headers]]   - Cache-Control rules (how long browsers keep files cached)
+#                   and security headers, applied per path pattern
+
+
+# Redirect any URL that doesn't match a real file to our custom 404 page.
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404
+
+
+# Images rarely change once uploaded (README instructs replacing files by
+# name, but new photos get new filenames), so let browsers cache them for
+# a full year to speed up repeat visits.
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+# HTML pages can change often (new photos, copy edits), so only cache them
+# for an hour to keep visitors seeing fresh content without refetching
+# constantly.
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"
+
+
+# Security headers applied to every page on the site.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"

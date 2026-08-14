@@ -43,6 +43,14 @@ Before adding any photo to the site, resize and compress it. Full-resolution cam
 
 Most photo editors (Lightroom, Photoshop, Affinity, etc.) can export at a specific pixel size and quality in one step — use the export/"Save for Web" settings rather than resizing after the fact.
 
+## Favicon and social preview image
+
+`favicon.ico` and `apple-touch-icon.png` (in the project root) are the browser tab icon and iOS bookmark icon. Both were generated from `images/gallery/photo-02.jpg`. `photo-02.jpg` is also used as the preview image (`og:image`) when a page link is shared on social media, iMessage, Slack, etc.
+
+If you'd rather use a different photo or a dedicated logo:
+1. Replace `favicon.ico` and `apple-touch-icon.png` with new versions (square, 180x180 for the apple icon).
+2. Update the `og:image` line in the `<head>` of `index.html` and `contact.html` to point at the new file.
+
 ## Deploying the site
 
 This site is hosted on Netlify using **Netlify Drop**, which just means dragging the folder onto a webpage — no command line, no git required.

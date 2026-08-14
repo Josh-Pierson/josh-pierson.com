@@ -33,6 +33,8 @@ images/
     photo-01.jpg ... photo-75.jpg   The gallery images, in display order
 README.md            Human-facing instructions for Josh (how to add/swap photos, deploy, image export settings, troubleshooting)
 LICENSE              MIT license — covers the CODE ONLY, not the photos (see below)
+favicon.ico          Browser tab icon, generated from images/gallery/photo-02.jpg
+apple-touch-icon.png iOS home-screen bookmark icon (180x180), generated from images/gallery/photo-02.jpg
 ```
 
 There is intentionally no `package.json`, no `node_modules`, no config files, and no server-side code. Keep it that way.
