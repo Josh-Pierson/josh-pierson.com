@@ -3,6 +3,11 @@
 
 <head>
     <title>Contact — Josh Pierson</title>
+    <!-- Fix (2026-08-14): this page was missing the viewport meta tag that index.html has.
+         Without it, mobile browsers render at a fake ~980px desktop width instead of the
+         real screen width, so the mobile media queries and the mobile header-reveal JS
+         (both keyed off window.innerWidth <= 768) never activated. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noai, noimageai">
 
     <!-- General page description, used by search engines -->
