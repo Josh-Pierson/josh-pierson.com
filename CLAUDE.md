@@ -10,6 +10,8 @@ This is Josh Pierson's static photography portfolio website. It is:
 - Hosted on **Netlify** with **git-based deploys** — Netlify is connected to the `main` branch of this repo, and pushing to `main` triggers a new build/deploy automatically. No CLI required, but deploys do go through git (not Netlify Drop).
 - Meant to remain a folder you can open directly in a browser (double-click `index.html`) and see exactly what will be live.
 
+- test
+
 **The site owner, Josh, is not a developer.** He maintains this site himself between AI-assisted sessions. This has direct consequences for how you should work here:
 
 - Keep changes simple and readable. Avoid clever or terse code.
