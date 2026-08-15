@@ -53,14 +53,16 @@ If you'd rather use a different photo or a dedicated logo:
 
 ## Deploying the site
 
-This site is hosted on Netlify using **Netlify Drop**, which just means dragging the folder onto a webpage — no command line, no git required.
+This site is hosted on Netlify with **git-based deploys**: Netlify is connected directly to the `main` branch of this repository. There is no manual upload step — pushing to `main` is what deploys the site.
 
-1. Go to [app.netlify.com/drop](https://app.netlify.com/drop).
-2. Drag the entire project folder (the one containing `index.html`) onto the page.
-3. Netlify uploads it and gives you a live URL within a minute or two.
-4. If the site is already connected to a custom domain in Netlify, the new upload replaces the live site automatically — no extra steps needed.
+1. Commit your changes and push to `main` (e.g. `git push origin main`).
+2. Netlify detects the push automatically and starts a new build/deploy.
+3. Within a minute or two, the build finishes and the live site updates.
+4. You can watch build progress and see build logs in the Netlify dashboard under the site's **Deploys** tab — useful for confirming a push actually triggered a new deploy, or for debugging a build that failed.
 
 Do this any time you've added/swapped photos or changed any file, and want those changes to go live.
+
+Note: because this site is plain HTML/CSS/JS with no build step, "building" here just means Netlify copying the files as-is and re-scanning them for things like the contact form (see below) — it isn't compiling or bundling anything.
 
 ## Photo copyright
 

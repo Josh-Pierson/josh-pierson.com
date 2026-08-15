@@ -7,7 +7,7 @@ Guidance for Claude Code (and other AI assistants) working in this repository.
 This is Josh Pierson's static photography portfolio website. It is:
 
 - Plain HTML, CSS, and JavaScript — **no framework, no build step, no bundler, no package manager**.
-- Hosted on **Netlify** via **Netlify Drop** (the whole project folder is dragged onto app.netlify.com/drop to deploy — no CLI, no git-based deploy pipeline).
+- Hosted on **Netlify** with **git-based deploys** — Netlify is connected to the `main` branch of this repo, and pushing to `main` triggers a new build/deploy automatically. No CLI required, but deploys do go through git (not Netlify Drop).
 - Meant to remain a folder you can open directly in a browser (double-click `index.html`) and see exactly what will be live.
 
 **The site owner, Josh, is not a developer.** He maintains this site himself between AI-assisted sessions. This has direct consequences for how you should work here:
